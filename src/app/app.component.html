@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <ul *ngFor="let user of users; let i = index" class="list-group">
+        <li class="list-group-item">
+        <app-active-users *ngIf="user.status == 0" [id]="i" [user]="user"></app-active-users>
+        <app-inactive-users *ngIf="user.status == 1" [id]="i" [user]="user"></app-inactive-users>
+        </li>
+      </ul>
+
+  </div>
+</div>
